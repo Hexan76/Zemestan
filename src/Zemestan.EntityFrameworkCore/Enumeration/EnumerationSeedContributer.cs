@@ -31,7 +31,7 @@ public class EnumerationSeedContributer(IEnumerationRepository repository) : IDa
             }
         },
 
-    }
+    };
     public async Task SeedAsync(DataSeedContext context)
     {
         var existing = (await repository.GetQueryableAsync()).ToList();

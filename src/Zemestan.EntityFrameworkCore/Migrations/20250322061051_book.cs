@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Zemestan.Migrations
 {
     /// <inheritdoc />
-    public partial class enumerationtest : Migration
+    public partial class book : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

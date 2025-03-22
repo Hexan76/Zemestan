@@ -13,8 +13,8 @@ using Zemestan.EntityFrameworkCore;
 namespace Zemestan.Migrations
 {
     [DbContext(typeof(ZemestanDbContext))]
-    [Migration("20241226114028_enumeration test")]
-    partial class enumerationtest
+    [Migration("20250322061051_book")]
+    partial class book
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

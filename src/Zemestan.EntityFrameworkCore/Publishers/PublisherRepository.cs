@@ -1,4 +1,4 @@
-using Zemestan.Domain.Authors;
+using Zemestan.Authors;
 using Zemestan.EntityFrameworkCore;
 
 public class PublisherRepository : EfCoreRepository<ZemestanDbContext, Publisher, Guid>

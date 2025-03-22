@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Diagnostics;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -74,20 +76,7 @@ public class ZemestanDbContext :
         builder.ConfigureOpenIddict();
         builder.ConfigureFeatureManagement();
         builder.ConfigureTenantManagement();
-
-
-
-        builder.Entity<Enumeration>(b =>
-        {
-            b.ConfigureByConvention();
-            b.HasMany(c => c.Translations).WithOne(c => c.Enumeration).HasForeignKey(c => c.EnumerationId);
-        });
-
-        builder.Entity<EnumerationTranslate>(b =>
-        {
-            b.ConfigureByConvention();
-            b.HasKey(c=> new {c.Language,c.EnumerationId});
-        });
+        builder.ConfigureZemestanEf(Assembly.GetExecutingAssembly());
 
         /* Configure your own tables/entities inside here */
 

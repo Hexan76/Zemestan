@@ -1,4 +1,4 @@
-using Zemestan.Domain.Categories;
+using Zemestan.Categories;
 using Zemestan.EntityFrameworkCore;
 
 public class CategoryRepository : EfCoreRepository<ZemestanDbContext, Category, Guid>
