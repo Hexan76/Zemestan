@@ -1,4 +1,5 @@
 namespace Zemestan.Orders;
+[Table(nameof(Order), Schema = ZemestanConsts.DbSchema)]
 public class Order : FullAuditedAggregateRoot<Guid>
 {
     public string Title { get; set; }

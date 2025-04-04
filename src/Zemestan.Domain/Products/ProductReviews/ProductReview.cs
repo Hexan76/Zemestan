@@ -1,6 +1,7 @@
 using Volo.Abp.Identity;
 
 namespace Zemestan.Products;
+[Table(nameof(ProductReview), Schema = ZemestanConsts.DbSchema)]
 public class ProductReview : FullAuditedAggregateRoot<Guid>
 {
     public int Rating { get; set; }

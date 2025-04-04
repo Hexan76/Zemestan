@@ -5,3 +5,4 @@ global using Zemestan.Categories;
 global using Volo.Abp.Domain.Repositories;
 global using Volo.Abp.Domain.Entities;
 global using Volo.Abp.Domain.Entities.Auditing;
+global using System.ComponentModel.DataAnnotations.Schema;

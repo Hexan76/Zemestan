@@ -1,7 +1,8 @@
 using Zemestan.Products;
 
 namespace Zemestan.Purchases;
-public class PurchaseDetails : Entity<Guid>
+[Table(nameof(PurchaseDetail), Schema = ZemestanConsts.DbSchema)]
+public class PurchaseDetail : Entity<Guid>
 {
     public decimal Price { get; set; }
     public decimal Quantity { get; set; }
@@ -10,6 +11,8 @@ public class PurchaseDetails : Entity<Guid>
 
     public Guid ProductId { get; set; }
     public virtual Product Product { get; set; }
+    public virtual Guid PurchaseId { get; set; }
+    public virtual Purchase Purchase { get; set; }
 
 
 }

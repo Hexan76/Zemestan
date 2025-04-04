@@ -2,6 +2,7 @@ using Zemestan.Orders;
 using Zemestan.Purchases;
 
 namespace Zemestan.Transactions;
+[Table(nameof(TransactionHeader), Schema = ZemestanConsts.DbSchema)]
 public class TransactionHeader : FullAuditedAggregateRoot<Guid>
 {
     public TransactionTypes Type { get; set; }

@@ -1,4 +1,5 @@
 namespace Zemestan.Purchases;
+[Table(nameof(Purchase), Schema = ZemestanConsts.DbSchema)]
 public class Purchase : FullAuditedAggregateRoot<Guid>
 {
     public string Title { get; set; }
@@ -6,6 +7,6 @@ public class Purchase : FullAuditedAggregateRoot<Guid>
     public OrderStatuses Status { get; set; }
     public string? Description { get; set; }
 
-    public virtual ICollection<PurchaseDetails> Details { get; set; }
+    public virtual ICollection<PurchaseDetail> Details { get; set; }
 
 }

@@ -1,4 +1,5 @@
 namespace Zemestan.Warehouses;
+[Table(nameof(Warehouse), Schema = ZemestanConsts.DbSchema)]
 public class Warehouse : FullAuditedAggregateRoot<Guid>
 {
     public string Title { get; set; }

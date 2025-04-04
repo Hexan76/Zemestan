@@ -1,4 +1,5 @@
 namespace Zemestan.Products;
+[Table(nameof(Product), Schema = ZemestanConsts.DbSchema)]
 public class Product : FullAuditedAggregateRoot<Guid>
 {
     public string Title { get; set; }

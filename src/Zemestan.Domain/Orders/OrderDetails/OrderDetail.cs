@@ -1,7 +1,7 @@
 using Zemestan.Products;
 
 namespace Zemestan.Orders;
-
+[Table(nameof(OrderDetail), Schema = ZemestanConsts.DbSchema)]
 public class OrderDetail : Entity<Guid>
 {
     public decimal Price { get; set; }
