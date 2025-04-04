@@ -1,7 +1,6 @@
 using Zemestan.Categories;
-using Zemestan.EntityFrameworkCore;
 
-public class CategoryRepository : EfCoreRepository<ZemestanDbContext, Category, Guid>
+public class CategoryRepository : EfCoreRepository<ZemestanDbContext, Category, Guid>, ICategoryRepository
 {
     public CategoryRepository(IDbContextProvider<ZemestanDbContext> dbContextProvider) : base(dbContextProvider)
     {
